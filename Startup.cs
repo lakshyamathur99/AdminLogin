@@ -32,7 +32,7 @@ namespace AdminLogin
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AdminLogin", Version = "v1" });
             });
-            services.AddCors;
+            services.AddCors();
             services.AddCors(options =>
             {
                 options.AddPolicy(name: "AllowOrigin",
