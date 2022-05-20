@@ -19,6 +19,11 @@ namespace AdminLogin.Controllers
             {
                 UserName="ritika",
                 Password="jain123"
+            },
+             new AdminLoginModel
+            {
+                UserName="Vishal",
+                Password="Vishal123"
             }
             
         };
