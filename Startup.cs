@@ -32,6 +32,17 @@ namespace AdminLogin
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AdminLogin", Version = "v1" });
             });
+            services.AddCors;
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "AllowOrigin",
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("*", "*")
+                                          .AllowAnyHeader()
+                                          .AllowAnyMethod();
+                                  });
+            });                    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +58,14 @@ namespace AdminLogin
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors();
+            app.UseCors(builder =>
+                        {
+                            builder
+                            .AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader()
+                            });
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
