@@ -64,7 +64,7 @@ namespace AdminLogin
                             builder
                             .AllowAnyOrigin()
                             .AllowAnyMethod()
-                            .AllowAnyHeader()
+                            .AllowAnyHeader();
                             });
             app.UseAuthorization();
 
