@@ -17,8 +17,8 @@ namespace AdminLogin.Controllers
         {
             new AdminLoginModel
             {
-                UserName="Admin",
-                Password="Admin"
+                UserName="ritika",
+                Password="jain123"
             }
             
         };
